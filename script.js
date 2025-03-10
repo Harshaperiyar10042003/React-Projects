@@ -1,19 +1,20 @@
 // Show the projects section (Slide Up)
 function showProjects() {
-    document.getElementById('projectsPage').style.bottom = "0"; 
+    document.getElementById('projectsPage').style.bottom = "0";
 }
 
 // Hide projects (Slide Down)
 function hideProjects() {
-    document.getElementById('projectsPage').style.bottom = "-100vh"; 
+    document.getElementById('projectsPage').style.bottom = "-100vh";
 }
 
 // Scroll Projects Left and Right
 let scrollPosition = 0;
+
 function scrollProjects(direction) {
     const carousel = document.querySelector('.projects-carousel');
-    const projectWidth = document.querySelector('.project').offsetWidth + 50; // Adjusted gap
-    const maxScroll = (carousel.scrollWidth - carousel.clientWidth);
+    const projectWidth = document.querySelector('.project').offsetWidth + 50; // Adjusted spacing
+    const maxScroll = (carousel.scrollWidth - carousel.clientWidth); // Total scrollable width
 
     if (direction === 'left') {
         scrollPosition = Math.max(scrollPosition - projectWidth, 0);
