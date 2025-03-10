@@ -158,11 +158,13 @@ body {
     }
 
     .projects-wrapper {
-    width: 95%;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping */
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     }
 
     .projects-carousel {
