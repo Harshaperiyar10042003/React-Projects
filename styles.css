@@ -139,13 +139,14 @@ body {
 }
 
 /* Responsive Design */
+/* Responsive Styling */
 @media screen and (max-width: 600px) {
     .container {
-        height: 80vh; /* Adjust height for smaller screens */
+        height: 80vh; 
     }
 
     .background {
-        object-fit: contain; /* Adjust background scaling */
+        object-fit: contain;
     }
 
     .scroll-indicator {
@@ -155,20 +156,20 @@ body {
     }
 
     .projects-container {
-        height: 65vh; /* Reduce height of project section */
+        height: 65vh; 
     }
 
     .projects-wrapper {
-        width: 90%; /* Adjust width */
+        width: 90%;
     }
 
     .projects-carousel {
-        gap: 50px; /* Reduce gap between projects */
+        gap: 50px;
     }
 
     .project {
         min-width: 120px;
-        height: 120px; /* Reduce size for small screens */
+        height: 120px;
     }
 
     .arrow {
@@ -182,3 +183,59 @@ body {
     }
 }
 
+/* Fix Arrow Button Position */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10; /* Ensure arrows appear above images */
+}
+
+.arrow.left {
+    left: 5%; /* Adjusted position */
+}
+
+.arrow.right {
+    right: 5%;
+}
+
+.projects-wrapper {
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center projects */
+}
+
+.projects-carousel {
+    display: flex;
+    gap: 50px; /* Adjust spacing */
+    transition: transform 0.5s ease-in-out;
+    align-items: center; /* Prevent images from shifting up */
+}
+
+.project {
+    min-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
