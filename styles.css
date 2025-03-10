@@ -139,7 +139,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .projects-wrapper {
         width: 90%;
     }
@@ -151,7 +151,7 @@ body {
 
     .arrow {
         font-size: 24px;
-        padding: 10px;
+        padding: 8px;
     }
 
     .back-button {
