@@ -136,7 +136,6 @@ body {
     transform: scale(1.1);
 }
 
-
 /* Responsive Design */
 @media screen and (max-width: 600px) {
     .container {
@@ -153,9 +152,38 @@ body {
         bottom: 20px;
     }
 
+    .projects-container {
+        height: 65vh;
+    }
+
+    /* Wrapper for smooth scrolling */
+    .projects-wrapper {
+        width: 95%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        display: flex;
+        justify-content: flex-start; /* Align projects to start */
+        scroll-behavior: smooth; /* Smooth scrolling */
+    }
+
+    /* Carousel for mobile scrolling */
+    .projects-carousel {
+        display: flex;
+        gap: 20px; /* Reduce gap for better fit */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    }
+
+    /* Individual Project Styling */
+    .project {
+        min-width: 120px; /* Adjust size for smaller screens */
+        height: 120px;
+        scroll-snap-align: start;
+    }
+
     .arrow {
-        font-size: 24px;
-        padding: 8px;
+        display: none; /* Hide left/right arrows on mobile */
     }
 
     .back-button {
@@ -163,3 +191,4 @@ body {
         font-size: 14px;
     }
 }
+
