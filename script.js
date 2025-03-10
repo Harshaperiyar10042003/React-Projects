@@ -13,7 +13,7 @@ let scrollPosition = 0;
 function scrollProjects(direction) {
     const carousel = document.querySelector('.projects-carousel');
     const projectWidth = document.querySelector('.project').offsetWidth + 15; // 15px gap
-    const visibleProjects = 1;
+    const visibleProjects = Math.floor(carousel.offsetWidth / projectWidth);
     const maxScroll = (carousel.children.length - visibleProjects) * projectWidth;
 
     if (direction === 'left') {
