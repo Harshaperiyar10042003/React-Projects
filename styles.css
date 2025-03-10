@@ -158,7 +158,11 @@ body {
     }
 
     .projects-wrapper {
-        width: 95%;
+    width: 95%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex;
+    justify-content: center;
     }
 
     .projects-carousel {
