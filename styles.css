@@ -153,33 +153,6 @@ body {
         bottom: 20px;
     }
 
-    .projects-container {
-        height: 65vh;
-    }
-
-    .projects-wrapper {
-    width: 100%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    display: flex;
-    justify-content: flex-start;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    }
-
-    .projects-carousel {
-    display: flex;
-    gap: 20px; /* Reduce gap for better fit */
-    overflow-x: scroll; /* Allow horizontal scrolling */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    }
-
-    .project {
-        min-width: 150px; /* Adjust size for smaller screens */
-        height: 150px;
-    }
-
     .arrow {
         font-size: 24px;
         padding: 8px;
