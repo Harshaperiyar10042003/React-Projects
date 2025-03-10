@@ -12,7 +12,6 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +19,7 @@ body {
 
 .background {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     animation: fadeIn 2s ease-in-out;
 }
@@ -30,7 +29,7 @@ body {
     to { opacity: 1; }
 }
 
-/* Scroll Indicator Animation */
+/* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -52,7 +51,7 @@ body {
 /* Projects Section */
 .projects-container {
     position: fixed;
-    bottom: -100vh; 
+    bottom: -100vh;
     left: 0;
     width: 100%;
     height: 75vh;
@@ -66,16 +65,18 @@ body {
 
 /* Project Carousel */
 .projects-wrapper {
-    width: 80%;
-    max-width: 900px;
+    width: 90%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .projects-carousel {
     display: flex;
-    gap: 50px;
+    gap: 20px;
     transition: transform 0.5s ease-in-out;
+    align-items: center;
 }
 
 .project {
@@ -109,14 +110,15 @@ body {
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .arrow.left {
-    left: 10px;
+    left: 5%;
 }
 
 .arrow.right {
-    right: 10px;
+    right: 5%;
 }
 
 /* Back Button */
@@ -139,10 +141,9 @@ body {
 }
 
 /* Responsive Design */
-/* Responsive Styling */
 @media screen and (max-width: 600px) {
     .container {
-        height: 80vh; 
+        height: 80vh;
     }
 
     .background {
@@ -156,24 +157,24 @@ body {
     }
 
     .projects-container {
-        height: 65vh; 
+        height: 65vh;
     }
 
     .projects-wrapper {
-        width: 90%;
+        width: 95%;
     }
 
     .projects-carousel {
-        gap: 50px;
+        gap: 10px;
     }
 
     .project {
-        min-width: 120px;
-        height: 120px;
+        min-width: 100px;
+        height: 100px;
     }
 
     .arrow {
-        font-size: 20px;
+        font-size: 24px;
         padding: 8px;
     }
 
@@ -181,61 +182,4 @@ body {
         padding: 10px 20px;
         font-size: 14px;
     }
-}
-
-/* Fix Arrow Button Position */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10; /* Ensure arrows appear above images */
-}
-
-.arrow.left {
-    left: 5%; /* Adjusted position */
-}
-
-.arrow.right {
-    right: 5%;
-}
-
-.projects-wrapper {
-    width: 70%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center; /* Center projects */
-}
-
-.projects-carousel {
-    display: flex;
-    gap: 50px; /* Adjust spacing */
-    transition: transform 0.5s ease-in-out;
-    align-items: center; /* Prevent images from shifting up */
-}
-
-.project {
-    min-width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-}
-
-.project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
