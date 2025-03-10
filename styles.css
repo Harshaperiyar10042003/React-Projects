@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+/* First Page */
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Scroll Indicator Animation */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Projects Section */
+.projects-container {
+    position: fixed;
+    bottom: -100vh; 
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background: rgba(20, 20, 20, 0.95);
+    transition: bottom 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Project Carousel */
+.projects-wrapper {
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+}
+
+.projects-carousel {
+    display: flex;
+    gap: 170px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project {
+    min-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}

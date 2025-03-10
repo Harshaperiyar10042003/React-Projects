@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- First Page -->
+    <div class="container">
+        <img src="images/front page 2.jpeg" alt="Twilight City" class="background">
+        <div class="scroll-indicator" onclick="showProjects()"></div>
+    </div>
+
+    <!-- Second Page (Project Section) -->
+    <div class="projects-container" id="projectsPage">
+        <button class="arrow left" onclick="scrollProjects('left')">&#9665;</button>
+        <div class="projects-wrapper">
+            <div class="projects-carousel">
+                <div class="project" onclick="openProject('qr-code.html')">
+                    <img src="images/qr-code-generator--icon.png" alt="QR Code Generator">
+                </div>
+                <div class="project" onclick="openProject('profile-card.html')">
+                    <img src="images/profile-card-icon.png" alt="Profile Card">
+                </div>
+                <div class="project" onclick="openProject('registration-form.html')">
+                    <img src="images/registration-form-icon.png" alt="Registration Form">
+                </div>
+                <div class="project" onclick="openProject('advice-app.html')">
+                    <img src="images/advice-app.png" alt="Advice App">
+                </div>
+                <div class="project" onclick="openProject('weather-app.html')">
+                    <img src="images/weather-app-icon.png" alt="Weather App">
+                </div>
+                <div class="project" onclick="openProject('bmi-calculator.html')">
+                    <img src="images/bmi-calculator-icon.png" alt="BMI Calculator">
+                </div>
+                
+            </div>
+        </div>
+        <button class="arrow right" onclick="scrollProjects('right')">&#9655;</button>
+        <button class="back-button" onclick="hideProjects()">Back</button>
+    </div>
+</body>
+</html>

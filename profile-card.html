@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            background-color: #f9e6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.8s ease-in-out;
+        }
+        .back-button:hover {
+            background: #555;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        .container h1 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .cylinder {
+            width: 150px;
+            height: 150px;
+            background: url('images/profile-card-icon.png') no-repeat center/cover;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .cylinder:hover {
+            transform: scale(1.1);
+        }
+        .preview-img {
+            width: 500px;
+            height: 250px;
+            margin-top: 50px;
+            
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            animation: fadeIn 2s ease-in-out;
+            padding: 15px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .description-box {
+            width: 300px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            transform: translateY(-50%);
+            text-align: center;
+            font-size: 14px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .description-box.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+        .description-box strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .description-box p {
+            font-size: 13px;
+            color: #333;
+        }
+        .description-box a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .lines {
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: black;
+            left: -60px;
+        }
+        .top-line {
+            top: 10%;
+        }
+        .bottom-line {
+            bottom: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">← Back</button>
+
+    <div class="container">
+        <h1>PROFILE CARD</h1>
+        <div class="cylinder" onclick="toggleDescription()"></div>
+        <img class="preview-img" src="images/Profile card preview.png" alt="card Preview">
+        
+        <div class="description-box" id="desc">
+            <div class="lines top-line"></div>
+            <div class="lines bottom-line"></div>
+            <strong>Profile Card</strong>
+            <p>An interactive Profile Card built with React.js, showcasing dynamic UI design, responsive styling, and efficient state management. This project highlights my expertise in component-based development and user-centric design.</p>
+            <a href="https://profile-card-project-2.netlify.app/" target="_blank">View Project</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDescription() {
+            var desc = document.getElementById("desc");
+            if (desc.classList.contains("show")) {
+                desc.classList.remove("show");
+            } else {
+                desc.classList.add("show");
+            }
+        }
+
+        function goBack() {
+            window.location.href = "index.html#projectsPage"; // Navigates back to projects section
+        }
+        
+    </script>
+
+</body>
+</html>
