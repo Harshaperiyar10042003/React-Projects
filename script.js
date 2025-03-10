@@ -12,14 +12,13 @@ function hideProjects() {
 let scrollPosition = 0;
 function scrollProjects(direction) {
     const carousel = document.querySelector('.projects-carousel');
-    const projectWidth = document.querySelector('.project').offsetWidth + 15; // 15px gap
-    const visibleProjects = 1;
-    const maxScroll = (carousel.children.length - visibleProjects) * projectWidth;
+    const projectWidth = document.querySelector('.project').offsetWidth + 50; // Adjusted gap
+    const maxScroll = (carousel.scrollWidth - carousel.clientWidth);
 
     if (direction === 'left') {
-        scrollPosition = Math.max(scrollPosition - projectWidth * 1.5, 0);
+        scrollPosition = Math.max(scrollPosition - projectWidth, 0);
     } else if (direction === 'right') {
-        scrollPosition = Math.min(scrollPosition + projectWidth * 1.5, maxScroll);
+        scrollPosition = Math.min(scrollPosition + projectWidth, maxScroll);
     }
 
     carousel.style.transform = `translateX(-${scrollPosition}px)`;
