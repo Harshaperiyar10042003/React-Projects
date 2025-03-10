@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ body {
 
 .background {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     animation: fadeIn 2s ease-in-out;
 }
@@ -61,14 +62,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 /* Project Carousel */
 .projects-wrapper {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 900px;
     overflow: hidden;
     position: relative;
 }
@@ -77,20 +76,15 @@ body {
     display: flex;
     gap: 50px;
     transition: transform 0.5s ease-in-out;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .project {
-    width: 180px;
-    height: 180px;
+    min-width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .project:hover {
@@ -111,11 +105,10 @@ body {
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.7);
     border: none;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
-    display: none;
 }
 
 .arrow.left {
@@ -131,12 +124,12 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     border: none;
     cursor: pointer;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     transition: 0.3s;
 }
@@ -146,47 +139,23 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .projects-container {
-        height: 70vh;
-    }
-    
+@media screen and (max-width: 768px) {
     .projects-wrapper {
-        width: 95%;
-    }
-
-    .projects-carousel {
-        gap: 30px;
-        justify-content: center;
+        width: 90%;
     }
 
     .project {
-        width: 140px;
-        height: 140px;
-    }
-
-    .arrow {
-        display: none;
-    }
-
-    .back-button {
-        font-size: 12px;
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-container {
-        height: 65vh;
-    }
-
-    .project {
-        width: 120px;
+        min-width: 120px;
         height: 120px;
     }
 
-    .scroll-indicator {
-        width: 30px;
-        height: 30px;
+    .arrow {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
