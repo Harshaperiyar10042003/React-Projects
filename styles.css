@@ -140,22 +140,45 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
+    .container {
+        height: 80vh; /* Adjust height for smaller screens */
+    }
+
+    .background {
+        object-fit: contain; /* Adjust background scaling */
+    }
+
+    .scroll-indicator {
+        width: 30px;
+        height: 30px;
+        bottom: 20px;
+    }
+
+    .projects-container {
+        height: 65vh; /* Reduce height of project section */
+    }
+
     .projects-wrapper {
-        width: 90%;
+        width: 90%; /* Adjust width */
+    }
+
+    .projects-carousel {
+        gap: 50px; /* Reduce gap between projects */
     }
 
     .project {
         min-width: 120px;
-        height: 120px;
+        height: 120px; /* Reduce size for small screens */
     }
 
     .arrow {
-        font-size: 24px;
+        font-size: 20px;
         padding: 8px;
     }
 
     .back-button {
-        font-size: 14px;
         padding: 10px 20px;
+        font-size: 14px;
     }
 }
+
