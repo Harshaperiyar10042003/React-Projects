@@ -166,10 +166,11 @@ body {
     }
 
     .projects-carousel {
-        gap: 50px; /* Reduce gap to fit more projects */
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 50px; /* Reduce gap for better fit */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     }
 
     .project {
